@@ -1,0 +1,229 @@
+/* Reset ing default styles,
+styling the typography */
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background: #020824;
+}
+
+* {
+  box-sizing: border-box;
+}
+span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9em;
+}
+p {
+  margin: 0;
+  color: #eee;
+  font-size: 0.8em;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Setting up the header
+and containers */
+header {
+  background: url(img/background.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Creating the primary and secondary
+button styles */
+.btn {
+  padding: 0.7em 2em;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #48fc8b, #1de7ea);
+  color: #111;
+  border: none;
+}
+.btn-primary:hover {
+  background: #1de7ea;
+}
+.btn-secondary {
+  border: 1px #1de7ea solid;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #fff;
+  color: #111;
+}
+.btn-group .btn {
+  margin: 1em;
+}
+
+/* Styling the navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0;
+}
+
+nav a {
+  text-transform: uppercase;
+  padding: 16px;
+}
+.brand {
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0.07em;
+}
+.search {
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 8em;
+  transition: 0.3s;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #fff;
+  display: none;
+}
+
+.menu .btn-primary {
+  display: none;
+}
+
+/* Styling the middle part of the header */
+.header-body {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0 1em 0;
+}
+.header-body div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+.header-body p {
+  max-width: 40em;
+  text-transform: uppercase;
+  line-height: 23px;
+  font-size: 1.4em;
+}
+.header-body p:nth-child(1) {
+  text-align: right;
+}
+h1 {
+  font-size: 100 em;
+}
+.grid-img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-body .btn,
+.trail .btn {
+  font-size: 1.1em;
+}
+.header-body .btn-group {
+  margin: 3em 0;
+}
+/* Responsive Desgin */
+@media screen and (max-width: 1000px) {
+  .menu-btn {
+    display: block;
+  }
+  nav .menu {
+    background: #020824;
+    position: absolute;
+    left: 0;
+    top: 5em;
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    overflow: hidden;
+    z-index: 9;
+  }
+  nav .btn-primary {
+    display: none;
+  }
+  .menu .btn-primary {
+    display: block;
+  }
+  /* Open Class For Javascript Toggle */
+  nav .menu-open {
+    opacity: 1;
+    height: 20em;
+    overflow: visible;
+  }
+  nav .menu li {
+    margin: lem 0;
+  }
+  span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 14px;
+  }
+  .header-body div div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-body p {
+    text-align: center !important;
+  }
+  span {
+    display: block;
+  }
+}
